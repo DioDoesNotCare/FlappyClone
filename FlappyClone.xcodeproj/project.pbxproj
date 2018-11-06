@@ -17,6 +17,8 @@
 		A211655E203645A6000DF358 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A211655C203645A6000DF358 /* LaunchScreen.storyboard */; };
 		A2116569203645A6000DF358 /* FlappyCloneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2116568203645A6000DF358 /* FlappyCloneTests.swift */; };
 		A2116574203645A6000DF358 /* FlappyCloneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2116573203645A6000DF358 /* FlappyCloneUITests.swift */; };
+		A23E1124204F2998006AE872 /* CityBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23E1123204F2998006AE872 /* CityBuilder.swift */; };
+		A25CDD932047870900210EE0 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25CDD922047870900210EE0 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A211656F203645A6000DF358 /* FlappyCloneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlappyCloneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2116573203645A6000DF358 /* FlappyCloneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlappyCloneUITests.swift; sourceTree = "<group>"; };
 		A2116575203645A6000DF358 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A23E1123204F2998006AE872 /* CityBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityBuilder.swift; sourceTree = "<group>"; };
+		A25CDD922047870900210EE0 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +107,12 @@
 		A211654C203645A6000DF358 /* FlappyClone */ = {
 			isa = PBXGroup;
 			children = (
+				A211658B203BC089000DF358 /* Controller */,
+				A211658A203BC075000DF358 /* View */,
+				A2116589203BC069000DF358 /* Model */,
 				A211654D203645A6000DF358 /* AppDelegate.swift */,
-				A211654F203645A6000DF358 /* GameScene.sks */,
-				A2116551203645A6000DF358 /* Actions.sks */,
-				A2116553203645A6000DF358 /* GameScene.swift */,
-				A2116555203645A6000DF358 /* GameViewController.swift */,
 				A2116557203645A6000DF358 /* Main.storyboard */,
+				A2116551203645A6000DF358 /* Actions.sks */,
 				A211655A203645A6000DF358 /* Assets.xcassets */,
 				A211655C203645A6000DF358 /* LaunchScreen.storyboard */,
 				A211655F203645A6000DF358 /* Info.plist */,
@@ -132,6 +136,32 @@
 				A2116575203645A6000DF358 /* Info.plist */,
 			);
 			path = FlappyCloneUITests;
+			sourceTree = "<group>";
+		};
+		A2116589203BC069000DF358 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A23E1123204F2998006AE872 /* CityBuilder.swift */,
+				A25CDD922047870900210EE0 /* City.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A211658A203BC075000DF358 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A211654F203645A6000DF358 /* GameScene.sks */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A211658B203BC089000DF358 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2116555203645A6000DF358 /* GameViewController.swift */,
+				A2116553203645A6000DF358 /* GameScene.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +302,8 @@
 			files = (
 				A2116554203645A6000DF358 /* GameScene.swift in Sources */,
 				A2116556203645A6000DF358 /* GameViewController.swift in Sources */,
+				A25CDD932047870900210EE0 /* City.swift in Sources */,
+				A23E1124204F2998006AE872 /* CityBuilder.swift in Sources */,
 				A211654E203645A6000DF358 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,11 +470,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FlappyClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlappyClone;
+				PRODUCT_BUNDLE_IDENTIFIER = "--PRODUCT-BUNDLE-IDENTIFIER-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,11 +487,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FlappyClone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.FlappyClone;
+				PRODUCT_BUNDLE_IDENTIFIER = "--PRODUCT-BUNDLE-IDENTIFIER-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
